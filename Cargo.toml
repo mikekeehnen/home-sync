@@ -1,0 +1,15 @@
+[package]
+name = "home-sync"
+authors = ["Mike Keehnen <mikekeehnen@me.com>"]
+description = ""
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+anyhow = "1"
+libsql-client = { git = "https://github.com/libsql/libsql-client-rs", version = "0.33.4", default-features = false, features = ["spin_backend"] }
+spin-sdk = { version = "2.1", default-features = false, features = ["http"] }
+[workspace]

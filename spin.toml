@@ -1,0 +1,25 @@
+spin_manifest_version = 2
+
+[application]
+name = "home-sync"
+version = "0.1.0"
+authors = [""]
+description = ""
+
+[[trigger.http]]
+route = "/..."
+component = "home-sync"
+
+[variables]
+turso_url = { default = "libsql://{db}-{username}.turso.io" }
+turso_auth_token = { required = true, secret = true }
+
+[component.home-sync]
+source = "target/wasm32-wasi/release/home_sync.wasm"
+allowed_outbound_hosts = ["https://{db}-{username}.turso.io"]
+[component.home-sync.variables]
+turso_url = "{{ turso_url }}"
+turso_auth_token = "{{ turso_auth_token }}"
+[component.home-sync.build]
+command = "cargo build --target wasm32-wasi --release"
+watch = ["src/**/*.rs", "Cargo.toml"]

@@ -1,0 +1,4 @@
+[sqlite_database.default]
+type = "libsql"
+url = "https://home-sync-mikekeehnen.turso.io"
+token = "eyJhbGciOiJFZERTQSIsInR5cCI6IkpXVCJ9.eyJpYXQiOiIyMDI0LTAxLTEzVDAwOjQ1OjU1LjQ4OTc3MDE5NFoiLCJpZCI6IjQxZjczYTU2LWIxOWQtMTFlZS1iNWY2LWZlZmUzOWU0ZjMxYiJ9.dccXImgieJmWEcbR5WFbI2NGYyHd_bDIKnbBCOyolS--lKvO0nfNkGcs2s8w366q5h-8I4uuK_b3sXkVij8OCw"
